@@ -1,3 +1,5 @@
+package bc93;
+
 import java.util.Scanner;
 
 public class SmallAndLargeIntegers {
@@ -13,16 +15,22 @@ public class SmallAndLargeIntegers {
 			A[i] = v;
 			v++;
 		}
+
+//		display(0,A.length,A);
+//      System.out.println();
 		
 		if( k >= A.length) {
 			display(0, A.length, A);
 			return;
 		}
-		
-		if (k <= (b - a)/2) {
+
+//        System.out.println("a : " + a + ", b : " + b + ", (b-a+1)/2 : " + (b-a+1)/2);
+		if (k <= (b-a+1)/2) {
+//            System.out.println("not duplicate");
 			display(0, k, A);
 	 		display(A.length - k, A.length, A);			
 		} else {
+//            System.out.println("duplicate");
 			display(0, k, A);
 	 		display(k, A.length, A);						
 		}		
